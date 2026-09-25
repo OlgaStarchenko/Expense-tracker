@@ -41,3 +41,7 @@ function saveDatabase() {
 
 export { db, saveDatabase };
 //Экспортируем переменную базы данных и функцию обновление в существующий файл бд
+
+// npm init - инициализация
+// npm install express sql.js - установка пакетов
+// node database.js - запускаем файл database.js в среде Node.js, то есть не в браузере.

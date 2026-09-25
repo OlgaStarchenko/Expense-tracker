@@ -1,0 +1,163 @@
+.header {
+  border: 2px solid gray;
+  max-width: 1400px;
+  margin: 20px 50px;
+  background-color: rgb(195, 194, 194);
+}
+.header__title {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.title__balance {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px;
+}
+.balance__indicator {
+  color: blue;
+}
+.header__container {
+  border-top: 2px solid gray;
+  display: flex;
+  justify-content: space-around;
+
+  gap: 10px;
+}
+.title__container__right {
+  display: flex;
+  justify-content: space-between;
+  margin: 7px;
+}
+.header__left {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.title__container__left {
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+}
+.header__filter__container {
+  display: flex;
+  flex-direction: column;
+}
+.select__header {
+  font-size: 16px;
+  padding: 3px;
+}
+.label__header__filter {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.input__header__filter {
+  font-size: 18px;
+  padding: 3px;
+}
+.header__right {
+  display: flex;
+  flex-direction: column;
+}
+.title__income {
+  font-size: 18px;
+}
+.income__indicator {
+  color: green;
+}
+.title__expenditure {
+  font-size: 18px;
+}
+.expenditure__indicator {
+  color: red;
+}
+
+.header__btn__container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.btn__header {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+.main__container {
+  border: 1px solid gray;
+  max-width: 1400px;
+  margin: 20px 50px;
+}
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid gray;
+
+  width: 400px;
+  margin: 20px 50px;
+  background-color: rgb(195, 194, 194);
+}
+.modal__title {
+  margin: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.form__modal {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+.title__container__modal {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+.label__modal {
+  font-size: 18px;
+}
+.input__modal {
+  font-size: 18px;
+  padding: 3px;
+}
+.transaction__amount {
+}
+.select__modal {
+  font-size: 16px;
+  padding: 3px;
+  margin: 5px 0;
+}
+.btn__modal {
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+table {
+  width: 100%; /* Растягиваем таблицу на всю ширину контейнера */
+  border-collapse: collapse; /* Убираем двойные рамки между ячейками */
+  font-family: sans-serif; /* Меняем шрифт на более современный */
+}
+
+th,
+td {
+  border: 1px solid #ccc; /* Задаем сплошную серую рамку толщиной 1px */
+  padding: 10px; /* Добавляем внутренние отступы, чтобы текст не прилипал */
+  text-align: left; /* Выравниваем текст по левому краю */
+}
+
+th {
+  background-color: #f2f2f2; /* Выделяем шапку таблицы светло-серым фоном */
+  font-weight: bold; /* Делаем текст в шапке жирным */
+  text-align: center; /* Выравниваем текст по центру*/
+}
+.btn__table__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn__table {
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
