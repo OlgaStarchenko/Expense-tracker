@@ -11,7 +11,7 @@
   <body>
     <header>
       <div class="header">
-        <div class="title__container__right">
+        <div class="title__container__left">
           <h1 class="header__title">Трекер расходов</h1>
           <h2 class="title__balance">
             Баланс: <span class="balance__indicator">127 500</span> ₽
@@ -20,49 +20,7 @@
         <div>
           <div class="header__container">
             <div class="header__left">
-              <div>
-                <div class="header__filter__container">
-                  <div class="title__container__left">
-                    <select
-                      name="category__header"
-                      id="category__header"
-                      class="select__header"
-                    >
-                      <option value="utility__payments">
-                        Коммунальные платежи
-                      </option>
-                      <option value="products">Продукты</option>
-                      <option value="transport__payment">
-                        Оплата транспорта
-                      </option>
-                      <option value="taxes">Налоги</option>
-                      <option value="other">Прочее</option>
-                    </select>
-                  </div>
-
-                  <div class="title__container__left">
-                    <label for="sum" class="label__header__filter">Сумма</label>
-                    <input
-                      type="text"
-                      inputmode="decimal"
-                      placeholder="0.00"
-                      name="sum"
-                      id="sum"
-                      class="input__header__filter"
-                    />
-                  </div>
-
-                  <div class="title__container__left">
-                    <label for="date" class="label__header__filter">Дата</label>
-                    <input
-                      type="date"
-                      name="date"
-                      id="date"
-                      class="input__header__filter"
-                    />
-                  </div>
-                </div>
-              </div>
+              <button class="btn__add">Добавить операцию</button>
             </div>
 
             <div class="header__right">
@@ -77,18 +35,22 @@
                   Расход: <span class="expenditure__indicator">52 500</span> ₽
                 </h3>
               </div>
-
-              <div class="header__btn__container">
-                <button class="btn__header">Посмотреть все операции</button>
-                <button class="btn__header">Добавить операцию</button>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     <main>
       <div class="main__container">
+        <div class="btn__filter__container">
+          <button class="btn__filter">Все</button>
+          <button class="btn__filter">Продукты</button>
+          <button class="btn__filter">Транспорт</button>
+          <button class="btn__filter">Развлечения</button>
+          <button class="btn__filter">Другое</button>
+        </div>
+
         <table>
           <thead>
             <tr>
@@ -108,75 +70,83 @@
             <td>Продукты</td>
             <td>
               <div class="btn__table__container">
-                <button class="btn__table">Редактировать</button>
                 <button class="btn__table">Удалить</button>
               </div>
             </td>
           </tbody>
         </table>
       </div>
-      <div class="modal__container">
-        <h3 class="modal__title">Добавить операцию</h3>
-        <form action="list__of__income__and__expenses" class="form__modal">
-          <div class="title__container__modal">
-            <label for="name__of__operation" class="label__modal"
-              >Название операции</label
-            >
-            <input
-              type="text"
-              name="name__of__operation"
-              id="name__of__operation"
-              class="input__modal"
-            />
-          </div>
 
-          <div class="title__container__modal">
-            <label for="transaction__amount" class="label__modal"
-              >Сумма операции</label
-            >
-            <input
-              type="text"
-              inputmode="decimal"
-              placeholder="0.00"
-              name="transaction__amount"
-              id="transaction__amount"
-              class="input__modal"
-            />
-          </div>
+      <div class="modal modal__open">
+        <div class="modal__container">
+          <h3 class="modal__title">Добавить операцию</h3>
+          <form action="list__of__income__and__expenses" class="form__modal">
+            <div class="title__container__modal">
+              <label for="name__of__operation" class="label__modal"
+                >Название операции</label
+              >
+              <input
+                type="text"
+                name="name__of__operation"
+                id="name__of__operation"
+                class="input__modal"
+              />
+            </div>
 
-          <select
-            name="operation__type"
-            id="operation__type"
-            class="select__modal"
-          >
-            <option value="income">Доход</option>
-            <option value="expenditure">Расход</option>
-          </select>
+            <div class="title__container__modal">
+              <label for="transaction__amount" class="label__modal"
+                >Сумма операции</label
+              >
+              <input
+                type="text"
+                inputmode="decimal"
+                placeholder="0.00"
+                name="transaction__amount"
+                id="transaction__amount"
+                class="input__modal"
+              />
+            </div>
 
-          <select
-            name="category__modal"
-            id="category__modal"
-            class="select__modal"
-          >
-            <option value="utility__payments">Коммунальные платежи</option>
-            <option value="products">Продукты</option>
-            <option value="transport__payment">Оплата транспорта</option>
-            <option value="taxes">Налоги</option>
-            <option value="other">Прочее</option>
-          </select>
-          <div class="title__container__modal">
-            <label for="date__of__operation" class="label__modal"
-              >Дата операции</label
+            <label for="operation__type" class="label__modal"
+              >Тип операции</label
             >
-            <input
-              type="date"
-              name="date__of__operation"
-              id="date__of__operation"
-              class="input__modal"
-            />
-          </div>
-          <button class="btn__modal">Добавить</button>
-        </form>
+            <select
+              name="operation__type"
+              id="operation__type"
+              class="select__modal"
+            >
+              <option value="income">Доход</option>
+              <option value="expenditure">Расход</option>
+            </select>
+
+            <label for="category__modal" class="label__modal"
+              >Категория операции</label
+            >
+            <select
+              name="category__modal"
+              id="category__modal"
+              class="select__modal"
+            >
+              <option value="utility__payments">Коммунальные платежи</option>
+              <option value="products">Продукты</option>
+              <option value="transport__payment">Оплата транспорта</option>
+              <option value="taxes">Налоги</option>
+              <option value="other">Прочее</option>
+            </select>
+            <div class="title__container__modal">
+              <label for="date__of__operation" class="label__modal"
+                >Дата операции</label
+              >
+              <input
+                type="date"
+                name="date__of__operation"
+                id="date__of__operation"
+                class="input__modal"
+              />
+            </div>
+            <button class="btn__modal">Добавить</button>
+          </form>
+        </div>
       </div>
     </main>
   </body>
