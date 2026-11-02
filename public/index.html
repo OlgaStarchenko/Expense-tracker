@@ -6,7 +6,7 @@
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <header>
@@ -77,10 +77,10 @@
         </table>
       </div>
 
-      <div class="modal modal">
+      <div class="modal">
         <div class="modal__container">
           <h3 class="modal__title">Добавить операцию</h3>
-          <form action="list__of__income__and__expenses" class="form__modal">
+          <form class="form__modal">
             <div class="title__container__modal">
               <label for="name__of__operation" class="label__modal"
                 >Название операции</label
@@ -98,9 +98,7 @@
                 >Сумма операции</label
               >
               <input
-                type="text"
-                inputmode="decimal"
-                placeholder="0.00"
+                type="number"
                 name="transaction__amount"
                 id="transaction__amount"
                 class="input__modal"
@@ -116,7 +114,7 @@
               class="select__modal"
             >
               <option value="income">Доход</option>
-              <option value="expenditure">Расход</option>
+              <option value="expense">Расход</option>
             </select>
 
             <label for="category__modal" class="label__modal"
@@ -144,7 +142,12 @@
                 class="input__modal"
               />
             </div>
-            <button class="btn__modal">Добавить</button>
+            <button class="btn__modal" id="add__tranzaction" type="button">
+              Добавить
+            </button>
+            <button class="btn__modal" id="cancel__tranzaction" type="button">
+              Отменить
+            </button>
           </form>
         </div>
       </div>
