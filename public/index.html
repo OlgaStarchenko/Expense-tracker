@@ -62,17 +62,21 @@
               <th>Действия</th>
             </tr>
           </thead>
-          <tbody>
-            <td>Продукты</td>
-            <td>2 500</td>
-            <td>25.09.2026</td>
-            <td>Расход</td>
-            <td>Продукты</td>
-            <td>
-              <div class="btn__table__container">
-                <button class="btn__table">Удалить</button>
-              </div>
-            </td>
+          <tbody id="transaction__list">
+            <template id="transaction-template">
+              <tr>
+                <td class="title"></td>
+                <td class="amount"></td>
+                <td class="date"></td>
+                <td class="type"></td>
+                <td class="category"></td>
+                <td>
+                  <div class="btn__table__container">
+                    <button class="btn__table">Удалить</button>
+                  </div>
+                </td>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
